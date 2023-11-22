@@ -6,6 +6,9 @@
     font-family: "Open sans", sans-serif;
     outline: none;
 }
+body{
+    overflow-x: hidden;
+}
 button{
     font-weight: 600;
     font-family: "Open sans", sans-serif; 
@@ -267,7 +270,7 @@ span{
         width: 300px;
         position: fixed;
         top: calc(2rem + 7vh);
-        right: -100%;
+        right: -300px;
         z-index: 100;
         background-color: #010210;
         transition: all 0.2s ease-in-out;

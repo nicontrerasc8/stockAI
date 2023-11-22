@@ -273,6 +273,9 @@ span{
     .menu{display: none;}
   }
 @media(max-width: 610px){
+    div h2{
+        text-align: center;
+    }
     .menu {
         display: flex;
         flex-direction: column;

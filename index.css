@@ -6,6 +6,18 @@
     font-family: "Open sans", sans-serif;
     outline: none;
 }
+::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #010210;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #3AADED;
+    border-radius: 3px;
+  }
+
 body{
     overflow-x: hidden;
 }
@@ -36,6 +48,9 @@ body{
     background: #010210;
     color: white;
     overflow-x: hidden;
+}
+button{
+    cursor: pointer;
 }
 nav div{
     display: flex;
@@ -109,13 +124,23 @@ nav div button.special-btn{
     flex-wrap: wrap;
     gap: 10px;
 }
+button{
+    position: relative;
+    transform: translateY(0);
+    transition: 1s;
+}
+button:hover{
+    transform: translateY(-5px);
+}
 .init div button:first-child{
     background-color: #94D9FF;
 }
+
 .init div button:last-child{
     background-color: #3AADED;
     color: white;
 }
+
 span{
     color: #3AADED;
 }
@@ -138,7 +163,7 @@ span{
     gap: calc(1vmax + 10px);
 }
 .grid-3 article, .grid-2 article{
-    width: clamp(300px, 25%, 25%);
+    width: clamp(300px, 27%, 27%);
     background-color: #050A30;
     display: flex;
     padding: 0 2%;
@@ -221,6 +246,13 @@ span{
     padding: 10px;
     font-size: 25px;
     border-radius: 5px;
+    border: 3px solid transparent;
+    transition: 1s;
+}
+.box-1 input:focus{
+    background-color: transparent;
+    border-color: #3AADED;
+    color: #3AADED;
 }
 @media screen and (max-width: 400px) {
     .box-1 img{

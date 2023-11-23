@@ -9,6 +9,17 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="index.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" /></head>
+    <script>
+
+        function MensajeEnviado(){
+            var n = document.getElementById("name")
+        var e = document.getElementById("email")
+        var p = document.getElementById("phone")
+        if(n && n.value && e && e.value && p && p.value)
+            alert("Tu mensaje fue enviado")
+        else alert("Por favor, llena todos los campos")
+        }
+    </script>
 </head>
 <body>
     <nav>
@@ -139,10 +150,10 @@
                 <h4>
                     Déjanos tus datos y te brindamos toda la información de <span>StockAI</span>
                 </h4>
-                <input placeholder="Nombre completo"/>
-                <input type="email" placeholder="Correo electrónico"/>
-                <input type="tel" placeholder="Telefono celular"/>
-                <button>
+                <input id="name" placeholder="Nombre completo"/>
+                <input id="email" type="email" placeholder="Correo electrónico"/>
+                <input id="phone" type="tel" placeholder="Telefono celular"/>
+                <button onclick="MensajeEnviado()">
                     Haz una prueba
                 </button>
             </div>
